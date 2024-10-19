@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+
+  orthanc:
+    build: orthanc
+    ports: ["8000:8042"]
+    environment:
+      ORTHANC__NAME: "orthanc-python"
+
+      VERBOSE_ENABLED: "true"
+      VERBOSE_STARTUP: "true"
+      ORTHANC__PYTHON_SCRIPT: "/python/test.py"
+      ORTHANC__PYTHON_VERBOSE: "true"
+
+      ORTHANC__REGISTERED_USERS: |
+        {"demo": "demo"}
+
+      #VERBOSE_ENABLED: "true"
+
+      # you must enable the StoneViewer and the DicomWeb plugins
+      STONE_WEB_VIEWER_PLUGIN_ENABLED: "true"
+      DICOM_WEB_PLUGIN_ENABLED: "true"
+
+      ORTHANC__DICOM_WEB__SERIES_METADATA: "Full"
+      ORTHANC__DICOM_WEB__STUDIES_METADATA: "Full"
+      ORTHANC__DICOM_WEB__METADATA_WORKER_THREADS_COUNT : "4"
+
+      # StoneViewer configurations
+      ORTHANC__STONE_WEB_VIEWER__DATE_FORMAT: "DD/MM/YYYY"
+
+      ORTHANC__AUTHENTICATION_ENABLED: "false"
