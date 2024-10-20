@@ -3,7 +3,8 @@ services:
 
   orthanc:
     build: orthanc
-    ports: ["8000:8000", "8042:8042"]
+    ports: ["8000:8000", "8042:8042", "4242:4242"]
+
     environment:
       ORTHANC__NAME: "orthanc-python"
 

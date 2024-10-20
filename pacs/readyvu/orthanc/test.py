@@ -8,11 +8,12 @@ import pprint
 
 import pydicom
 from doc import InspectOrthancModule
-
+from readyvu import on_stored_instance
 
 # uncomment to show the Orthanc Module functions/classes/enums
 # InspectOrthancModule()
 
+# orthanc.RegisterOnStoredInstanceCallback(gusi_on_new_sop.on_stored_instance)
 
 
 def OnRestPydicom(output, uri, **request):
@@ -31,6 +32,7 @@ def OnRestPydicom(output, uri, **request):
 
 # add two rest callback
 orthanc.RegisterRestCallback('/pydicom/(.*)', OnRestPydicom)  # (*)
+orthanc.RegisterOnStoredInstanceCallback(on_stored_instance)
 
 
 # add a "show-metadata" button in the Orthanc Explorer
