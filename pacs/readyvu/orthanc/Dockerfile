@@ -6,7 +6,7 @@ FROM orthancteam/orthanc
 RUN apt-get update && apt install -y python3-venv
 RUN python3 -m venv /.venv
 
-RUN /.venv/bin/pip install pydicom requests
+RUN /.venv/bin/pip install pydicom requests xmltodict
 ENV PYTHONPATH=/.venv/lib64/python3.11/site-packages/
 
 RUN mkdir /python

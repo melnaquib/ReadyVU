@@ -1,0 +1,193 @@
+data/test/bpmn/process1.bpmn
+/mnt/data1/melnaquib/data1/h/ethcc/sf/ReadyVU/pacs/readyvu/orthanc
+{'bpmn:definitions': {'@exporter': 'bpmn-js (https://demo.bpmn.io)',
+                      '@exporterVersion': '17.11.1',
+                      '@id': 'Definitions_0abm08y',
+                      '@targetNamespace': 'http://bpmn.io/schema/bpmn',
+                      '@xmlns:bpmn': 'http://www.omg.org/spec/BPMN/20100524/MODEL',
+                      '@xmlns:bpmndi': 'http://www.omg.org/spec/BPMN/20100524/DI',
+                      '@xmlns:dc': 'http://www.omg.org/spec/DD/20100524/DC',
+                      '@xmlns:di': 'http://www.omg.org/spec/DD/20100524/DI',
+                      '@xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+                      'bpmn:collaboration': {'@id': 'Collaboration_0inq7ht',
+                                             'bpmn:messageFlow': [{'@id': 'Flow_1pzzs1f',
+                                                                   '@sourceRef': 'Activity_1rk26qy',
+                                                                   '@targetRef': 'Activity_1rozaz1'},
+                                                                  {'@id': 'Flow_0dsrxet',
+                                                                   '@sourceRef': 'Activity_1rozaz1',
+                                                                   '@targetRef': 'Activity_0wsw9gk'}],
+                                             'bpmn:participant': [{'@id': 'Participant_02ruwl7',
+                                                                   '@name': 'hospital',
+                                                                   '@processRef': 'Process_0nlsord'},
+                                                                  {'@id': 'Participant_0dut5rs',
+                                                                   '@name': 'doctor_performing',
+                                                                   '@processRef': 'Process_0py5goe'}]},
+                      'bpmn:process': [{'@id': 'Process_0nlsord',
+                                        '@isExecutable': 'false',
+                                        'bpmn:endEvent': {'@id': 'Event_0i86kf5',
+                                                          'bpmn:incoming': 'Flow_0ub7mam'},
+                                        'bpmn:sequenceFlow': [{'@id': 'Flow_1nktm7f',
+                                                               '@sourceRef': 'StartEvent_0zwm886',
+                                                               '@targetRef': 'Activity_1rk26qy'},
+                                                              {'@id': 'Flow_0ub7mam',
+                                                               '@sourceRef': 'Activity_0wsw9gk',
+                                                               '@targetRef': 'Event_0i86kf5'}],
+                                        'bpmn:startEvent': {'@id': 'StartEvent_0zwm886',
+                                                            'bpmn:outgoing': 'Flow_1nktm7f'},
+                                        'bpmn:task': [{'@id': 'Activity_1rk26qy',
+                                                       '@name': 'assign',
+                                                       'bpmn:incoming': 'Flow_1nktm7f'},
+                                                      {'@id': 'Activity_0wsw9gk',
+                                                       '@name': 'send_report',
+                                                       'bpmn:outgoing': 'Flow_0ub7mam'}]},
+                                       {'@id': 'Process_0py5goe',
+                                        'bpmn:task': {'@id': 'Activity_1rozaz1',
+                                                      '@name': 'approve'}}],
+                      'bpmndi:BPMNDiagram': {'@id': 'BPMNDiagram_1',
+                                             'bpmndi:BPMNPlane': {'@bpmnElement': 'Collaboration_0inq7ht',
+                                                                  '@id': 'BPMNPlane_1',
+                                                                  'bpmndi:BPMNEdge': [{'@bpmnElement': 'Flow_1nktm7f',
+                                                                                       '@id': 'Flow_1nktm7f_di',
+                                                                                       'di:waypoint': [{'@x': '278',
+                                                                                                        '@y': '170'},
+                                                                                                       {'@x': '330',
+                                                                                                        '@y': '170'}]},
+                                                                                      {'@bpmnElement': 'Flow_0ub7mam',
+                                                                                       '@id': 'Flow_0ub7mam_di',
+                                                                                       'di:waypoint': [{'@x': '750',
+                                                                                                        '@y': '170'},
+                                                                                                       {'@x': '812',
+                                                                                                        '@y': '170'}]},
+                                                                                      {'@bpmnElement': 'Flow_1pzzs1f',
+                                                                                       '@id': 'Flow_1pzzs1f_di',
+                                                                                       'di:waypoint': [{'@x': '430',
+                                                                                                        '@y': '170'},
+                                                                                                       {'@x': '460',
+                                                                                                        '@y': '170'},
+                                                                                                       {'@x': '460',
+                                                                                                        '@y': '440'},
+                                                                                                       {'@x': '490',
+                                                                                                        '@y': '440'}]},
+                                                                                      {'@bpmnElement': 'Flow_0dsrxet',
+                                                                                       '@id': 'Flow_0dsrxet_di',
+                                                                                       'di:waypoint': [{'@x': '590',
+                                                                                                        '@y': '440'},
+                                                                                                       {'@x': '620',
+                                                                                                        '@y': '440'},
+                                                                                                       {'@x': '620',
+                                                                                                        '@y': '170'},
+                                                                                                       {'@x': '650',
+                                                                                                        '@y': '170'}]}],
+                                                                  'bpmndi:BPMNShape': [{'@bpmnElement': 'Participant_02ruwl7',
+                                                                                        '@id': 'Participant_02ruwl7_di',
+                                                                                        '@isHorizontal': 'true',
+                                                                                        'bpmndi:BPMNLabel': None,
+                                                                                        'dc:Bounds': {'@height': '250',
+                                                                                                      '@width': '792',
+                                                                                                      '@x': '156',
+                                                                                                      '@y': '50'}},
+                                                                                       {'@bpmnElement': 'StartEvent_0zwm886',
+                                                                                        '@id': '_BPMNShape_StartEvent_2',
+                                                                                        'dc:Bounds': {'@height': '36',
+                                                                                                      '@width': '36',
+                                                                                                      '@x': '242',
+                                                                                                      '@y': '152'}},
+                                                                                       {'@bpmnElement': 'Activity_1rk26qy',
+                                                                                        '@id': 'Activity_1rk26qy_di',
+                                                                                        'bpmndi:BPMNLabel': None,
+                                                                                        'dc:Bounds': {'@height': '80',
+                                                                                                      '@width': '100',
+                                                                                                      '@x': '330',
+                                                                                                      '@y': '130'}},
+                                                                                       {'@bpmnElement': 'Activity_0wsw9gk',
+                                                                                        '@id': 'Activity_0wsw9gk_di',
+                                                                                        'bpmndi:BPMNLabel': None,
+                                                                                        'dc:Bounds': {'@height': '80',
+                                                                                                      '@width': '100',
+                                                                                                      '@x': '650',
+                                                                                                      '@y': '130'}},
+                                                                                       {'@bpmnElement': 'Event_0i86kf5',
+                                                                                        '@id': 'Event_0i86kf5_di',
+                                                                                        'dc:Bounds': {'@height': '36',
+                                                                                                      '@width': '36',
+                                                                                                      '@x': '812',
+                                                                                                      '@y': '152'}},
+                                                                                       {'@bpmnElement': 'Participant_0dut5rs',
+                                                                                        '@id': 'Participant_0dut5rs_di',
+                                                                                        '@isHorizontal': 'true',
+                                                                                        'bpmndi:BPMNLabel': None,
+                                                                                        'dc:Bounds': {'@height': '250',
+                                                                                                      '@width': '600',
+                                                                                                      '@x': '156',
+                                                                                                      '@y': '320'}},
+                                                                                       {'@bpmnElement': 'Activity_1rozaz1',
+                                                                                        '@id': 'Activity_1rozaz1_di',
+                                                                                        'bpmndi:BPMNLabel': None,
+                                                                                        'dc:Bounds': {'@height': '80',
+                                                                                                      '@width': '100',
+                                                                                                      '@x': '490',
+                                                                                                      '@y': '400'}}]}}}}
+
+storage {
+    current_state_id: int,
+    data: (int => int),
+
+}
+
+predicate Initialize {
+    state current_state_id: int = mut storage::current_state_id;
+    constraint current_state_id' == 0';
+}
+
+
+
+predicate task___NODE_ID__ {
+    var sender: b256;
+    var datum: datum;
+
+    state current_state_id: int = mut storage::current_state_id;
+    constraint sender == -3877168119227344836;
+    state datum = mut storage::data[current_state_id];
+    constraint current_state_id' == 4967004882818890855;
+
+}
+    
+
+
+predicate task___NODE_ID__ {
+    var sender: b256;
+    var datum: datum;
+
+    state current_state_id: int = mut storage::current_state_id;
+    constraint sender == -3877168119227344836;
+    state datum = mut storage::data[current_state_id];
+    constraint current_state_id' == -8151414218030040134;
+
+}
+    
+
+
+predicate task___NODE_ID__ {
+    var sender: b256;
+    var datum: datum;
+
+    state current_state_id: int = mut storage::current_state_id;
+    constraint sender == -3877168119227344836;
+    state datum = mut storage::data[current_state_id];
+    constraint current_state_id' == 9130043350876757433;
+
+}
+    
+
+
+predicate task___NODE_ID__ {
+    var sender: b256;
+    var datum: datum;
+
+    state current_state_id: int = mut storage::current_state_id;
+    constraint sender == 8386185277168121211;
+    state datum = mut storage::data[current_state_id];
+    constraint current_state_id' == -3955272656354523295;
+
+}
+    

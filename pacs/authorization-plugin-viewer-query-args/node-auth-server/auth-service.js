@@ -34,7 +34,9 @@ function grantAccess(response, authKey, authToken, resourceLevel, orthancId) {
   }
 
   response.writeHead(200, { 'Content-Type' : 'application/json' });
-  response.end(JSON.stringify(answer));
+  // response.header("Access-Control-Allow-Origin", "*");
+  // response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    response.end(JSON.stringify(answer));
 }
 
 
