@@ -7,3 +7,5 @@ docker/python-bug/
 **/__pycache__/*
 tmp/
 .history/
+node_modules/
+
