@@ -67,11 +67,16 @@ export const runExample = async (pkpPublicKey: string) => {
     });
     console.log("✅ Got Session Signatures");
 
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+    // var msg = urlParams.get('findings');
+    var msg = "findings";
+
     console.log("🔄 Executing Lit Action...");
     const message = new Uint8Array(
       await crypto.subtle.digest(
         "SHA-256",
-        new TextEncoder().encode("Hello world")
+        new TextEncoder().encode(msg)
       )
     );
     const litActionSignatures = await litNodeClient.executeJs({

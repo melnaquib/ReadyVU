@@ -43,7 +43,7 @@ predicate Initialize {
     srcd = xmltodict.parse(bpmn)
     nodes = {}
     edges = {}
-    pprint(srcd, compact=True)
+    # pprint(srcd, compact=True)
         
     cs = {}
 
@@ -98,7 +98,7 @@ predicate Initialize {
 
 
 def cvt_file(src):
-    print(sys.path[0]);
+    # print(sys.path[0]);
     pint_text = ""
     with open(src, 'r') as f:
         bpmn_text = f.read()
@@ -109,7 +109,7 @@ def cvt_file(src):
 def main():
     src = sys.argv[1]
     # src = "data/test/bpmn/process1.bpmn"
-    print(src)
+    # print(src)
     res = cvt_file(src)
     print(res)
 

@@ -31,10 +31,13 @@ async function buttonClick() {
     const sessionSigs = await getSessionSigs(litNodeClient, ethersSigner);
     console.log("Got Session Signatures!");
 
+    const urlParams = new URLSearchParams(queryString);
+    msg = urlParams.get('findings');
+
     const message = new Uint8Array(
       await crypto.subtle.digest(
         "SHA-256",
-        new TextEncoder().encode("Hello world")
+        new TextEncoder().encode(msg)
       )
     );
     const litActionSignatures = await litNodeClient.executeJs({
